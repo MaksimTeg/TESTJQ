@@ -1,0 +1,15 @@
+.App {
+  font-family: sans-serif;
+  text-align: center;
+}
+.postcols {
+  overflow: hidden;
+}
+.postcols-left {
+  float: left;
+  width: 35%;
+  background: #fff2e1;
+}
+.postcols-right {
+  margin-left: 38%;
+}

@@ -1,0 +1,11 @@
+.userPhoto {
+  height: 100px;
+}
+.avatar img {
+  height: 3rem;
+  border-radius: 1rem;
+}
+.selectid_Page {
+  font-weight: bold;
+  font-size: 800;
+}
