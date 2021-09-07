@@ -1,15 +1,11 @@
-.App {
-  font-family: sans-serif;
-  text-align: center;
+.header {
+  background-color: white;
+  position: fixed;
+  top: 0;
+  padding-top: 10px;
+  z-index: 100;
+  width: 100%;
 }
-.postcols {
-  overflow: hidden;
-}
-.postcols-left {
-  float: left;
-  width: 35%;
-  background: #fff2e1;
-}
-.postcols-right {
-  margin-left: 38%;
+.container {
+  margin-top: 115px;
 }

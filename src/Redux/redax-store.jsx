@@ -1,15 +1,13 @@
 import { applyMiddleware, combineReducers, createStore } from "redux";
-import thunkMiddleware from "redux-thunk";
-import PostsReduser from "./post-reduser";
-import postProfileReducer from "./postProfile-reduser";
+import profileReducer from "./profile-reducer";
+import usersReducer from "./users-reducer";
+import thunk from "redux-thunk";
 
 let reducers = combineReducers({
-  postsPage: PostsReduser,
-  postPage: postProfileReducer
+  profilePage: profileReducer,
+  usersPage: usersReducer
 });
+let store = createStore(reducers, applyMiddleware(thunk));
 
-let store = createStore(reducers, applyMiddleware(thunkMiddleware));
-
-window.__store__ = store;
-
+window.store = store;
 export default store;

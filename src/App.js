@@ -1,20 +1,24 @@
-import React from "react";
+import React, { Component } from "react";
+import { Route, withRouter } from "react-router-dom";
 import "./App.css";
-import PostsContainer from "./Components/Posts/PostsContainer";
-import { RightBody } from "./Components/RightBody";
+import UsersContainer from "./Components/Users/UsersContainer";
+import ProfileContainer from "./Components/Profile/ProfileContainer";
+import Navbar from "./Components/Navbar/Navbar";
 
-export default function App() {
-  return (
-    <div className="App">
-      <h1>All Posts</h1>
-      <div className="postcols">
-        <div className="postcols-left">
-          <PostsContainer />
+class App extends Component {
+  render() {
+    return (
+      <div className="">
+        <div className="header">
+          <Navbar />
         </div>
-        <div className="postcols-right">
-          <RightBody />
+
+        <div className="container">
+          <Route path="/users/" render={() => <UsersContainer />} />
+          <Route path="/posts/:userId?" render={() => <ProfileContainer />} />
         </div>
       </div>
-    </div>
-  );
+    );
+  }
 }
+export default withRouter(App);
